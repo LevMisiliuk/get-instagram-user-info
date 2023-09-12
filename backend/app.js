@@ -8,7 +8,7 @@ const ig = new IgApiClient();
 
 async function getFollowers(username) {
   ig.state.generateDevice(username);
-  await ig.account.login(username, '2=<4Dnd2'); // Replace PASS with the actual password
+  await ig.account.login(username, '***'); // Replace PASS with the actual password
 
   const userSearch = await ig.user.searchExact(username); // Replace USER_TO_CHECK with the username to check
   const followersFeed = ig.feed.accountFollowers(userSearch.pk);
